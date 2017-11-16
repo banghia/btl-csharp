@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{008E2154-B7E3-48BA-981F-9C3279FC2EAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_3Layer</RootNamespace>
+    <AssemblyName>3Layer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\GameBLL.cs" />
+    <Compile Include="BLL\QuestionBLL.cs" />
+    <Compile Include="BLL\SoundBLL.cs" />
+    <Compile Include="DAL\CatagoryDAL.cs" />
+    <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\QuestionDAL.cs" />
+    <Compile Include="DTO\Catagory.cs" />
+    <Compile Include="DTO\History.cs" />
+    <Compile Include="DTO\Player.cs" />
+    <Compile Include="DTO\Question.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HelpAskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HelpAskForm.Designer.cs">
+      <DependentUpon>HelpAskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HelpCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HelpCallForm.Designer.cs">
+      <DependentUpon>HelpCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuestionsManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuestionsManagerForm.Designer.cs">
+      <DependentUpon>QuestionsManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HelpAskForm.resx">
+      <DependentUpon>HelpAskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HelpCallForm.resx">
+      <DependentUpon>HelpCallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuestionsManagerForm.resx">
+      <DependentUpon>QuestionsManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hoi_Hop_Cho_KQ.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\congratulation.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_ask.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_call.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help50.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhacnho.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\press_button.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question6.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question8.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question9.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question10.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question11.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question12.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question13.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question14.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question15.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rule.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thank_you.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timesup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waitanswer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

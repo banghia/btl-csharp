@@ -1,0 +1,12 @@
+E:\Code\C#\3Layer\3Layer\bin\Debug\3Layer.exe
+E:\Code\C#\3Layer\3Layer\bin\Debug\3Layer.pdb
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\_3Layer.GUI.GameForm.resources
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\_3Layer.Properties.Resources.resources
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\3Layer.csproj.GenerateResource.Cache
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\3Layer.exe
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\3Layer.pdb
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\_3Layer.Form1.resources
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\_3Layer.GUI.HelpCallForm.resources
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\_3Layer.GUI.HelpAskForm.resources
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\_3Layer.GUI.QuestionsManagerForm.resources
+E:\Code\C#\3Layer\3Layer\obj\x86\Debug\3Layer.csprojResolveAssemblyReference.cache
